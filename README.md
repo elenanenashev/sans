@@ -20,7 +20,7 @@ git clone https://github.com/elenanenashev/sans.git
 cd sans
 ```
 
-### Install npm
+### Install npm, node, yarn
 Follow OS specific instructions from https://www.npmjs.com/get-npm
 
 For MacOS
@@ -45,16 +45,27 @@ Packages to be installed are in package.json file.
 ### Install packages
 (from package.json) by running following command
 ```
-cd ~/WORKING.DIR/
+cd ~/WORKING.DIR/sans
 npm install
 ```
 ### Verify webdriver-manager 
 ```
 node_modules/webdriver-manager/bin/webdriver-manager version
+
+```
+
+### Webdriver binaries
+```
+yarn webdriver
 ```
 
 ### Running Instructions
+# Window 1
+```
+yarn http-server
+```
 
+# Window 2
 ```
 yarn current-specs
 
