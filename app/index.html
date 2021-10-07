@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body onload="manageSubmit()">
+
+<h2 id="hdr">SANS</h2>
+
+<form action="/success.html">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="Title" value="" maxlength=200 onkeyup="manageSubmit()" ><br>
+
+  <label for="rel_date">Release Date:</label>
+  <input type='date' id="rel_date" name="Release Date" value="" min="2015-10-01" onblur="manageSubmit()" ><br>
+
+  <label for="rating" >Rating:</label>
+  <input type="number" id="rating" name="Rating" value="" min="1" max="5" onblur="manageSubmit()"><br><br>
+
+  <p id="msg_title"  > Title should be less than 200 chars long</p>
+  <p id="msg_rdate"  > Release Date should be greater than 2015-10-01</p>
+  <p id="msg_rating" > Rating should be between 1 and 5 inclusive </p>
+
+  <input type="submit" id="sb"  value="Add Movie" disabled>
+</form> 
+
+</body>
+
+<script>
+    function manageSubmit() {
+      // input fields
+      var bt = document.getElementById('sb');
+      var t  = document.getElementById('title');
+      var rd = document.getElementById('rel_date');
+      var r  = document.getElementById('rating');
+      
+      // hints
+      var msg_title = document.getElementById('msg_title');
+      var msg_rdate = document.getElementById('msg_rdate');
+      var msg_rating = document.getElementById('msg_rating');
+
+      // checks for title
+      if (t.value.length < 1 || t.value.length > 200) {
+        msg_title.style.visibility = "visible";
+        t.value='';
+      } else {
+        msg_title.style.visibility = "hidden";
+      }
+
+      // checks for release date
+      if (rd.value < '2015-10-01') {
+        msg_rdate.style.visibility = "visible";
+        rd.value='';
+      } else {
+        msg_rdate.style.visibility = "hidden";
+      }
+
+      // checks for ratings
+      if(r.value < 1 || r.value > 5){
+        msg_rating.style.visibility = "visible";
+        r.value='';
+      } else {
+        msg_rating.style.visibility = "hidden";
+      }
+
+      // if neither hins are visible we are good to proceed with submit
+      if (msg_title.style.visibility == "hidden" && msg_rdate.style.visibility == "hidden" && msg_rating.style.visibility == "hidden" ) {
+        bt.disabled = false;
+      }
+      else {
+          bt.disabled = true;            
+      }
+  }
+
+</script>
+
+ </html>

@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "target": "ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types"],
+    "strictBindCallApply": false,
+    "noUnusedParameters": false,
+    "outDir": "./dist/out-tsc",
+    "declaration": false,
+    "noUnusedLocals": false,
+    "types": ["jasmine", "jasminewd2", "node"]
+  }
+}
+

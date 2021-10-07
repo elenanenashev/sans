@@ -1,0 +1,30 @@
+{
+  "name": "protractor-tests",
+  "scripts": {
+    "current-specs": "rm -rf testresults/; node_modules/protractor/bin/protractor protractor.conf.js",
+    "webdriver": "node_modules/webdriver-manager/bin/webdriver-manager update",
+    "http-server": "node_modules/http-server/bin/http-server app"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.9.1",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/selenium-webdriver": "^4.0.9",
+    "jasmine-spec-reporter": "^5.0.2",
+    "protractor": "^7.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.3",
+    "http-server": "^13.0.2",
+    "jasmine": "^2.8.0",
+    "jasmine-reporters": "^2.3.2",
+    "jquery": "^3.5.1",
+    "luxon": "^1.26.0",
+    "protractor-beautiful-reporter": "^1.3.6",
+    "protractor-html-reporter-2": "^1.0.4",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
