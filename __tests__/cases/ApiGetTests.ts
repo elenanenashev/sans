@@ -43,7 +43,7 @@ describe(" Get Tests ", () => {
     });
 
     it("Verify ip format ", async () => {
-        console.log(jsonData)
+        // console.log(jsonData)
         expect(ValidateIPaddress(jsonData.origin)).toBe(true);
     });
 
