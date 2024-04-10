@@ -67,4 +67,6 @@ yarn http-server
 ```
 yarn current-specs
 
+yarn api
+
 ```
