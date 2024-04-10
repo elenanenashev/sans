@@ -46,15 +46,11 @@ Packages to be installed are in package.json file.
 cd ~/WORKING.DIR/sans
 npm install
 ```
-### Verify webdriver-manager 
+### make current chromedriver 
 ```
-node_modules/webdriver-manager/bin/webdriver-manager version
+npm uninstall chromedriver
+npm install chromedriver
 
-```
-
-### Webdriver binaries
-```
-yarn webdriver
 ```
 
 ### Running Instructions
