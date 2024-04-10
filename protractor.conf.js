@@ -1,7 +1,9 @@
 let HtmlReporter  = require('protractor-beautiful-reporter');
 const {SpecReporter} = require('jasmine-spec-reporter');
+const chromedriver = require('chromedriver');
 
 exports.config = {
+  chromeDriver: 'node_modules/chromedriver/bin/chromedriver',
 
   SELENIUM_PROMISE_MANAGER: false,
   allScriptsTimeout: 999999,
