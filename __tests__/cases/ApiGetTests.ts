@@ -33,7 +33,7 @@ describe(" Get Tests ", () => {
 
         jsonData = await JSON.parse(result.text)
 
-        console.log(jsonData)
+        // console.log(jsonData)
         
 
     });
