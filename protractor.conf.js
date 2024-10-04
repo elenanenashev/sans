@@ -1,6 +1,6 @@
-let HtmlReporter  = require('protractor-beautiful-reporter');
-const {SpecReporter} = require('jasmine-spec-reporter');
-const chromedriver = require('chromedriver');
+let SpecReporter  = require('jasmine-spec-reporter').SpecReporter;
+var HtmlReporter  = require('protractor-beautiful-reporter');
+//const chromedriver = require('chromedriver');
 
 exports.config = {
   chromeDriver: 'node_modules/chromedriver/bin/chromedriver',
@@ -13,11 +13,17 @@ exports.config = {
     browserName: 'chrome',
     chromeOptions: {
       args: ['--window-size=1920,1400'],
-      //args: ["--headless", "--disable-gpu", "--window-size=1920,1400"]
+      // args: [ 
+      //         '--incognito',
+      //         '--headless=new', 
+      //         '--disable-gpu',  
+      //         '--window-size=1920,1400',
+      //         'user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      //       ]
   }
 },
   directConnect: true,
-  baseUrl: "http://localhost:8080",
+  baseUrl: "https://magento.softwaretestingboard.com",
   framework: 'jasmine',
   jasmineNodeOpts: {
       realtimeFailure:    true,
@@ -37,7 +43,7 @@ exports.config = {
 
   specs: [ 
    
-    './src/specs/AddMovieTests.ts'
+    './src/specs/test4-*.ts'
     
     ],
   
