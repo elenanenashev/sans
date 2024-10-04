@@ -13,11 +13,11 @@ cd ~/WORKING.DIR/
 
 ```
 
-clone project into working directory
+Copy archive and unzip it
 
 ```
-git clone https://github.com/elenanenashev/sans.git
-cd sans
+unzip vae.zip
+cd vae
 ```
 
 ### Install npm, node, yarn
@@ -43,23 +43,17 @@ Packages to be installed are in package.json file.
 ### Install packages
 (from package.json) by running following command
 ```
-cd ~/WORKING.DIR/sans
+cd ~/WORKING.DIR/vae
 npm install
 ```
-### make current chromedriver 
+### if necessary make current chromedriver 
 ```
 npm uninstall chromedriver
 npm install chromedriver
 
 ```
 
-### Running Instructions
-# Window 1
-```
-yarn http-server
-```
-
-# Window 2
+# Run in the terminal
 ```
 yarn current-specs
 

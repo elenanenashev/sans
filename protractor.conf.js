@@ -43,7 +43,7 @@ exports.config = {
 
   specs: [ 
    
-    './src/specs/test4-*.ts'
+    './src/specs/*.ts'
     
     ],
   
