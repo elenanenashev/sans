@@ -1,12 +1,17 @@
 import request from "supertest";
 import { describe, expect, beforeAll, jest } from '@jest/globals';
-import moment from 'moment';
+// import moment from 'moment';
 
-function ValidateIPaddress(ipaddress) {  
-    if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ipaddress)) {  
-      return (true)  
-    }  
-    return (false)  
+function ValidateIPaddress(ipaddresses) {
+    // could be csv string of ips
+    // console.log(ipaddresses)
+    ipaddresses.split(',').forEach(ip => {
+        if ( ! /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/.test(ip.trim()) ) {  
+            return (false)  
+          }  
+    });
+
+    return (true)  
   }  
 
 describe(" Get Tests ", () => {
@@ -18,23 +23,12 @@ describe(" Get Tests ", () => {
     var resp :any;
     jest.setTimeout(600000);
 
-    // let dt = new Date();
-    // let current_date = new Date (dt);
-    // current_date.setUTCFullYear (current_date.getUTCFullYear());
-    // current_date.setUTCDate (current_date.getUTCDate());
-    // let today_date = moment (current_date).valueOf();
-
-
     beforeAll(async function() {
 
         result = await request(base_url)
             .get("/ip")
 
-
         jsonData = await JSON.parse(result.text)
-
-        // console.log(jsonData)
-        
 
     });
 
