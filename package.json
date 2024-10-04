@@ -44,7 +44,7 @@
     "@types/jest": "^27.5.2",
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.18.96",
-    "chromedriver": "^123.0.2",
+    "chromedriver": "latest",
     "http-server": "^13.1.0",
     "jasmine": "^2.99.0",
     "jasmine-reporters": "^2.5.2",
